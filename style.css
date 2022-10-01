@@ -1,0 +1,60 @@
+body{
+    background-color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+    background-color: darkslategray;
+    color:aqua;
+}
+#content{
+    background-color:dimgray;
+    color: aqua;
+    padding: 10px;
+}
+#title{
+    text-align: center;
+}
+#textbox1{
+    padding: 10px;
+}
+#input{
+    background-color:gray;
+    padding: 10px;
+}
+#n{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#l{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#go{
+    float: center;
+}
+#canvas{
+    width: 780px;
+    height: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    color:chartreuse;
+    border: 2px solid red;
+}
+#codebox{
+    background-color: gray;
+    padding: 10px;
+    font-size: 90%;
+    
+}
+#footer{
+    padding: 10px;
+    color: gray;
+    font-size: 60%;
+}
