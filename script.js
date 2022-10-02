@@ -159,10 +159,7 @@ function construct(rectlist, lmax, n){
     }
 }
 
-function draw(n, rectlist, scale){
-    let ctx = document.getElementById('canvas').getContext('2d');
-    ctx.translate(0, canvas.height);
-    ctx.scale(1, -1);
+function draw(n, rectlist){
     for (let i = 0; i < n; i++){
         ctx.strokeRect(rectlist[i].x, rectlist[i].y, rectlist[i].h, rectlist[i].l);
     }
@@ -192,3 +189,7 @@ function main(){
     draw(n, rectlist);
     rectlist = [];
 }
+
+let ctx = document.getElementById('canvas').getContext('2d');
+ctx.translate(0, canvas.height);
+ctx.scale(1, -1);
