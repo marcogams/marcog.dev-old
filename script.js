@@ -40,7 +40,8 @@ function calclmax(rectlist, n, lfactor){
     for (let i = 0; i < n; i++){
         area += rectlist[i].h*rectlist[i].l;
     }
-    return lfactor*Math.sqrt(area) | 0;
+    let l = lfactor*Math.sqrt(area);
+    return l | 0;
 }
 
 function construct(rectlist, lmax, n){
@@ -198,7 +199,7 @@ function main(){
     stage.destroyChildren();
     stage.add(layer);
     const n = parseInt(document.getElementById('nbox').value);
-    const lfactor = parseInt(document.getElementById('lbox').value);
+    const lfactor = parseFloat(document.getElementById('lbox').value);
     generaterect(n, minl, maxl, rectlist);
     sortrectlist(rectlist);
     construct(rectlist, calclmax(rectlist, n, lfactor), n);
