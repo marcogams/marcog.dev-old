@@ -159,19 +159,26 @@ function construct(rectlist, lmax, n){
     }
 }
 
-function drawRect(x, y, h, l) {
+function drawRect(x, y, h, l, color) {
     return new Konva.Rect({
         x: x,
         y: y,
         width: l,
         height: h,
-        stroke: 'red',
+        stroke: color,
     });
 }
 
 function draw(n, rectlist){
+    var color;
     for (let i = 0; i < n; i++){
-        layer.add(drawRect(rectlist[i].x, rectlist[i].y, rectlist[i].h, rectlist[i].l));
+        if (i%2 == 0){
+            color = 'black';
+        }
+        else {
+            color = 'black';
+        }
+        layer.add(drawRect(rectlist[i].x, rectlist[i].y, rectlist[i].h, rectlist[i].l, color));
     }
 }
 
