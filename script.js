@@ -201,7 +201,7 @@ function main(){
     const n = parseInt(document.getElementById('nbox').value);
     const lfactor = parseFloat(document.getElementById('lbox').value);
     if (lfactor < 0.5){
-        addalert('lfactor has to be >= 0.5');
+        alert('lfactor has to be >= 0.5');
         throw new Error('lfactor has to be >= 0.5');
     }
     generaterect(n, minl, maxl, rectlist);
