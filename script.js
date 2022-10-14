@@ -159,37 +159,45 @@ function construct(rectlist, lmax, n){
     }
 }
 
+function drawRect(x, y, h, l) {
+    return new Konva.Rect({
+        x: x,
+        y: y,
+        width: l,
+        height: h,
+        stroke: 'red',
+    });
+}
+
 function draw(n, rectlist){
     for (let i = 0; i < n; i++){
-        ctx.strokeRect(rectlist[i].x, rectlist[i].y, rectlist[i].h, rectlist[i].l);
+        layer.add(drawRect(rectlist[i].x, rectlist[i].y, rectlist[i].h, rectlist[i].l));
     }
 }
 
-function clearcanvas(){
-    let ctx = document.getElementById('canvas').getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
+var width = window.innerWidth;
+var height = window.innerHeight;
 
-function printCAD(n, rectlist){
-    for (let i = 0; i < n; i++){
-        console.log('_pline ' + rectlist[i].x + ',' + rectlist[i].y + ' ' + (rectlist[i].x + rectlist[i].l) + ',' + rectlist[i].y + ' ' + (rectlist[i].x + rectlist[i].l) + ',' + (rectlist[i].y + rectlist[i].h) + ' ' + rectlist[i].x + ',' + (rectlist[i].y + rectlist[i].h) + ' _c');
-    }
-}
+var stage = new Konva.Stage({
+    container: 'drawbox',
+    width: width,
+    height: height,
+    draggable: true,
+  });
+
+var layer = new Konva.Layer();
 
 function main(){
-    clearcanvas();
+    stage.destroyChildren();
+    stage.add(layer);
     const n = parseInt(document.getElementById('nbox').value);
     const lfactor = parseInt(document.getElementById('lbox').value);
-
     generaterect(n, minl, maxl, rectlist);
     sortrectlist(rectlist);
     construct(rectlist, calclmax(rectlist, n, lfactor), n);
     console.log(rectlist);
-    //printCAD(n, rectlist);
     draw(n, rectlist);
     rectlist = [];
 }
 
-let ctx = document.getElementById('canvas').getContext('2d');
-ctx.translate(0, canvas.height);
-ctx.scale(1, -1);
+

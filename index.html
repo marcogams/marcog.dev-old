@@ -3,6 +3,8 @@
     <head>
         <title>marcog.dev</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta charset="utf-8" />
+        <script src="https://unpkg.com/konva@8.3.13/konva.min.js"></script>
     </head>
     <body>
         <div id="container">
@@ -32,9 +34,8 @@
                         <button type="button" id="gobutton" onclick="main()">GO</button>
                     </div>
                 </div>
-                <canvas id="canvas" width="780px" height="780px">
-
-                </canvas>
+                <div id="drawbox">
+                </div>
                 <div id="codebox">
                     <h3>Pseudocode</h3>
                     <p>generate n number of rectangles with random height and width</p>
