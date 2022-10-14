@@ -200,6 +200,9 @@ function main(){
     stage.add(layer);
     const n = parseInt(document.getElementById('nbox').value);
     const lfactor = parseFloat(document.getElementById('lbox').value);
+    if (lfactor < 0.5){
+        throw new Error('lfactor has to be >= 0.5')
+    }
     generaterect(n, minl, maxl, rectlist);
     sortrectlist(rectlist);
     construct(rectlist, calclmax(rectlist, n, lfactor), n);
