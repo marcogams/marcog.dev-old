@@ -211,7 +211,6 @@ function main(){
     generaterect(n, minl, maxl, rectlist);
     sortrectlist(rectlist);
     construct(rectlist, calclmax(rectlist, n, lfactor), n);
-    console.log(rectlist);
     draw(n, rectlist);
     rectlist = [];
 }
