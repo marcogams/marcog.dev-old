@@ -215,4 +215,17 @@ function main(){
     rectlist = [];
 }
 
+let scale1 = 1;
+let zoomStep = 0.1;
 
+function zoomin(){
+    zoomStage1(zoomStep);
+}
+function zoomout(){
+    zoomStage1(-zoomStep);
+}
+
+function zoomStage1(inc) {
+  scale1 = scale1 + inc;
+  stage.setAttrs({ scaleX: scale1, scaleY: scale1 });
+}

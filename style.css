@@ -44,11 +44,12 @@ body{
 #go{
     float: center;
 }
-#drawbox{
+#drawcontainer{
     margin-left: auto;
     margin-right: auto;
     border: 2px solid red;
     overflow: hidden;
+    position: relative;
 }
 #codebox{
     background-color: #ffef96;
@@ -60,4 +61,20 @@ body{
     padding: 10px;
     color: gray;
     font-size: 60%;
+}
+#zoom{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+#zoomin{
+    font-size: 150%;
+    width: 35px;
+    height: 35px;
+}
+#zoomout{
+    font-size: 150%;
+    width: 35px;
+    height: 35px;
 }
