@@ -31,7 +31,7 @@
                             <input type="number" id="nbox" name="nbox" value="50"></input>
                         </div>
                         <div id="l">
-                            <label for="lbox">l-factor = </label>
+                            <label for="lbox">L-factor = </label>
                             <input type="number" id="lbox" name="lbox" value="1"></input>
                         </div>
                     </form>
@@ -44,7 +44,7 @@
                 <div id="codebox">
                     <h3>Pseudocode</h3>
                     <p>generate n number of rectangles with random height and width</p>
-                    <p>l = sqrt(area of all rectangles) * l-factor</p>
+                    <p>L = sqrt(area of all rectangles) * L-factor</p>
                     <p style="margin-bottom: 40px;">sort rectangles by height, then width</p>
                     <p style="margin-bottom: 40px;">for n number of rectangles:</p>
                     <p style="margin-left: 40px">if height of next rectangle smaller than previous:</p>
@@ -52,7 +52,7 @@
                     <p style="margin-left: 40px">if next rectangle trespasses a transition point:</p>
                     <p style="margin-left: 80px;">update current height</p>
                     <p style="margin-left: 80px;" style="margin-bottom: 40px;">append new transition point for next row</p>
-                    <p style="margin-left: 40px">if current position <= l (or 0):</p>
+                    <p style="margin-left: 40px">if current position <= L (or 0):</p>
                     <p style="margin-left: 80px;">lay down current rectangle</p>
                     <p style="margin-left: 40px">else:</p>
                     <p style="margin-left: 80px;">switch direction of rectangle laying</p>
