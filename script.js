@@ -183,6 +183,21 @@ function draw(n, rectlist){
     }
 }
 
+let scale1 = 1;
+let zoomStep = 0.1;
+
+function zoomin(){
+    zoomStage1(zoomStep);
+}
+function zoomout(){
+    zoomStage1(-zoomStep);
+}
+
+function zoomStage1(inc) {
+  scale1 = scale1 + inc;
+  stage.setAttrs({ scaleX: scale1, scaleY: scale1 });
+}
+
 var width = window.innerWidth;
 var height = window.innerHeight;
 
@@ -213,19 +228,4 @@ function main(){
     construct(rectlist, calclmax(rectlist, n, lfactor), n);
     draw(n, rectlist);
     rectlist = [];
-}
-
-let scale1 = 1;
-let zoomStep = 0.1;
-
-function zoomin(){
-    zoomStage1(zoomStep);
-}
-function zoomout(){
-    zoomStage1(-zoomStep);
-}
-
-function zoomStage1(inc) {
-  scale1 = scale1 + inc;
-  stage.setAttrs({ scaleX: scale1, scaleY: scale1 });
 }
