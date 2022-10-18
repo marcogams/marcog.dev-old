@@ -204,6 +204,10 @@ function main(){
         alert('lfactor has to be >= 0.5');
         throw new Error('lfactor has to be >= 0.5');
     }
+    if (n < 10){
+        alert('n has to be >= 10');
+        throw new Error('n has to be >= 10');
+    }
     generaterect(n, minl, maxl, rectlist);
     sortrectlist(rectlist);
     construct(rectlist, calclmax(rectlist, n, lfactor), n);
